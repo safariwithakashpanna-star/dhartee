@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /db_connect.php
+Disallow: /default.php
+Sitemap: https://safariwithakash.com/sitemap.xml

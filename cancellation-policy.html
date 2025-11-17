@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cancellation Policy | Safari With Akash</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cancellation rules and charges for Safari With Akash bookings.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#516b4a', // Deep Jungle Green
+                            gold: '#d4af37',  // Safari Gold
+                            orange: '#e65100', // Tiger Orange
+                            light: '#f9fafb',
+                            rust: '#8c3b1f'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Segoe UI', 'Inter', 'sans-serif'],
+                        serif: ['Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .page-header {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1631122041926-4111df526464?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .table-custom th {
+            background-color: #516b4a;
+            color: white;
+            font-weight: 600;
+        }
+        .table-custom tr:nth-child(even) {
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased flex flex-col min-h-screen text-lg">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="logo/safari_logo.JPG" alt="Logo" class="h-14 w-14 object-contain group-hover:scale-105 transition">
+                    <div class="leading-tight">
+                        <h1 class="text-2xl font-bold text-brand-green">Safari With Akash</h1>
+                    </div>
+                </a>
+                <div class="hidden lg:flex items-center gap-8 font-medium text-gray-700 text-base">
+                    <a href="index.html" class="hover:text-brand-orange transition">Home</a>
+                    <a href="services.html" class="hover:text-brand-orange transition">Services</a>
+                    <a href="booking.html" class="hover:text-brand-orange transition">Safari Booking</a>
+                    <a href="tour-packages.html" class="hover:text-brand-orange transition">Tour Packages</a>
+                    <a href="hotels.html" class="hover:text-brand-orange transition">Hotels</a>
+                    <a href="booking.html" class="bg-brand-orange text-white px-6 py-2 rounded-md hover:bg-orange-700 transition shadow-md">Book Now</a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-brand-green text-3xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t text-base">
+            <div class="flex flex-col p-4 space-y-4 font-medium">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="booking.html">Safari Booking</a>
+                <a href="tour-packages.html">Tour Packages</a>
+                <a href="hotels.html">Hotels</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header h-64 flex items-center justify-center text-center px-4">
+        <div data-aos="zoom-in">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-2">Cancellation Policy</h1>
+            <p class="text-gray-200 text-lg">Rules regarding booking cancellations</p>
+        </div>
+    </header>
+
+    <main class="py-16">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="bg-white p-8 md:p-12 rounded-xl shadow-sm border border-gray-200 text-gray-700 leading-relaxed space-y-6" data-aos="fade-up">
+                
+                <p>We understand that plans can change. If you need to cancel your booking, please review our cancellation tiers below. Cancellation requests must be sent via email to <strong>booking@safariwithakash.com</strong>.</p>
+
+                <h2 class="text-2xl font-bold text-brand-green mt-8 mb-4">Cancellation Charges</h2>
+                
+                <div class="overflow-x-auto shadow rounded-lg border border-gray-200 mb-6">
+                    <table class="w-full text-left table-custom">
+                        <thead>
+                            <tr>
+                                <th class="px-6 py-4">Time Before Safari Date</th>
+                                <th class="px-6 py-4">Refund Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b">
+                                <td class="px-6 py-4 font-medium">More than 30 Days</td>
+                                <td class="px-6 py-4">75% of Safari Cost</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="px-6 py-4 font-medium">15 to 30 Days</td>
+                                <td class="px-6 py-4">50% of Safari Cost</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="px-6 py-4 font-medium">Less than 15 Days</td>
+                                <td class="px-6 py-4 text-red-600 font-bold">No Refund</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="bg-red-50 border-l-4 border-red-500 p-4 mt-6 rounded-r">
+                    <p class="font-bold text-red-800 mb-1">Important Note:</p>
+                    <p class="text-red-700 text-sm">The Government Safari Permit Fee component of your booking is strictly <strong>NON-REFUNDABLE</strong> under any circumstances once the permit is issued by the Forest Department. The refund percentages above apply only to the service charges and vehicle/guide fees.</p>
+                </div>
+
+                <h2 class="text-2xl font-bold text-brand-green mt-8 mb-4">No Show Policy</h2>
+                <p>If the guest fails to show up for the safari at the designated pickup time or entry gate, it will be treated as a "No Show," and <strong>no refund</strong> will be provided.</p>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300 pt-16 pb-8 text-base">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-4">Copyright © 2025 By Safari With Akash (Reserve India Tours)</p>
+            <div class="flex justify-center gap-6 text-sm text-gray-500">
+                <a href="privacy-policy.html" class="hover:text-brand-orange">Privacy Policy</a>
+                <a href="terms-conditions.html" class="hover:text-brand-orange">Terms & Conditions</a>
+                <a href="refund-policy.html" class="hover:text-brand-orange">Refund Policy</a>
+                <a href="cancellation-policy.html" class="hover:text-brand-orange">Cancellation Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

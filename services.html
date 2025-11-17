@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Services | Safari With Akash</title>
+    <meta name="title" content="Our Services | Safari With Akash">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://safariwithakash.com/services.html">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#1B4332', // New Richer Forest Green
+                            dark: '#081c15',  // Darker shade for footer
+                            gold: '#D4AF37',  // Metallic Gold
+                            orange: '#E65100', // Tiger Orange
+                            light: '#F8F9FA', // Soft White
+                            cream: '#FDFCF8', // Warm Paper/Cream Background
+							rust: '#9D0208'   // Deep Red/Rust for accents
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Segoe UI', 'Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'Georgia', 'serif'], // Added Playfair for elegance
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Hero Overlay for Services Page */
+        .hero-services {
+            background-image: linear-gradient(to bottom, rgba(27, 67, 50, 0.4), rgba(8, 28, 21, 0.6)), url('https://images.unsplash.com/photo-1500660653062-8d9210039b65?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        /* Card Hover Effects */
+        .hover-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid transparent;
+        }
+        .hover-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px -5px rgba(27, 67, 50, 0.15);
+            border-color: #D4AF37;
+        }
+
+        /* Button Gradient */
+        .btn-gradient {
+            background: linear-gradient(45deg, #E65100, #F57C00);
+            transition: all 0.3s ease;
+        }
+        .btn-gradient:hover {
+            background: linear-gradient(45deg, #F57C00, #E65100);
+            box-shadow: 0 10px 15px -3px rgba(230, 81, 0, 0.3);
+        }
+
+        /* About Info Box Hover */
+        .info-box-hover {
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .info-box-hover:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+            border-color: #D4AF37;
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-gray-800 antialiased flex flex-col min-h-screen text-lg">
+
+    <!-- Top Bar -->
+    <div class="bg-brand-green text-white py-2 hidden md:block text-sm tracking-wide">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <a href="tel:+917557388388" class="flex items-center hover:text-brand-gold transition">
+                    <i class="fa-solid fa-phone mr-2 text-brand-gold"></i> +91 79740 74134
+                </a>
+                <a href="mailto:booking@safariwithakash.com" class="flex items-center hover:text-brand-gold transition">
+                    <i class="fa-solid fa-envelope mr-2 text-brand-gold"></i> booking@safariwithakash.com
+                </a>
+            </div>
+             <div class="flex items-center gap-4">
+                <a href="#" class="hover:text-brand-gold"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-brand-gold"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white/95 backdrop-blur-md shadow-md sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="logo/safari_logo.JPG" alt="Logo" class="h-14 w-14 object-contain group-hover:scale-105 transition">
+                    <div class="leading-tight">
+                       <div class="text-2xl font-bold text-brand-green font-serif tracking-tight">Safari With Akash</div>
+                    </div>
+                </a>
+
+                <div class="hidden lg:flex items-center gap-8 font-medium text-gray-700 text-base">
+                    <a href="index.html" class="hover:text-brand-green transition">Home</a>
+                    <a href="services.html" class="text-brand-green font-bold border-b-2 border-brand-green">Services</a>
+                    <a href="booking.html" class="hover:text-brand-green transition">Safari Booking</a>
+                    <a href="tour-packages.html" class="hover:text-brand-green transition">Tour Packages</a>
+                    <a href="hotels.html" class="hover:text-brand-green transition">Hotels</a>
+                    <a href="booking.html" class="btn-gradient text-white px-7 py-2.5 rounded-full font-semibold shadow-md hover:-translate-y-0.5">Book Now</a>
+                </div>
+
+                <button id="mobile-menu-btn" class="lg:hidden text-brand-green text-3xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t text-base shadow-xl">
+            <div class="flex flex-col p-4 space-y-4 font-medium text-center">
+                <a href="index.html" class="hover:text-brand-green">Home</a>
+                <a href="services.html" class="text-brand-green font-bold">Services</a>
+                <a href="booking.html" class="hover:text-brand-green">Safari Booking</a>
+                <a href="tour-packages.html" class="hover:text-brand-green">Tour Packages</a>
+                <a href="hotels.html" class="hover:text-brand-green">Hotels</a>
+                <a href="booking.html" class="btn-gradient text-white py-2 rounded-lg">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-services h-[400px] md:h-[500px] flex items-center justify-center text-center px-4">
+        <div class="bg-brand-dark/40 p-8 md:p-12 rounded-2xl backdrop-blur-sm max-w-4xl mx-auto text-white border border-white/10" data-aos="zoom-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight font-serif drop-shadow-lg">
+                Our Safari Services
+            </h1>
+            <div class="h-1 w-24 bg-brand-gold mx-auto mb-6 rounded-full"></div>
+            <p class="text-xl md:text-2xl font-light text-gray-100 drop-shadow-md">
+                Choose from our comprehensive range of wildlife experiences designed to bring you closer to nature.
+            </p>
+        </div>
+    </header>
+
+    <!-- Safari Experiences Grid -->
+    <section class="py-20 bg-brand-cream">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl font-bold text-brand-green mb-4 font-serif">Safari Experiences</h2>
+                <p class="text-gray-600 text-xl">Professional wildlife tours tailored to your interests</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden hover-card border border-gray-100 flex flex-col group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-56 bg-gray-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1561731216-c3a4d99437d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tiger Safari" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 right-4 bg-brand-orange text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-md">Popular</div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-2xl font-bold text-brand-green mb-3 font-serif">Tiger Safari Tours</h3>
+                        <p class="text-gray-600 mb-6 text-base">Experience the thrill of spotting magnificent Bengal tigers in their natural habitat with our expert guides.</p>
+                        <div class="mt-auto pt-6 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-brand-green font-bold text-xl">₹2,500 <span class="text-sm font-normal text-gray-500">/ person</span></span>
+                            <a href="booking.html" class="text-brand-orange font-bold hover:text-brand-green transition">Book Now <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden hover-card border border-gray-100 flex flex-col group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-56 bg-gray-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1554425788-56b9964407b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Photography Tour" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-2xl font-bold text-brand-green mb-3 font-serif">Wildlife Photography</h3>
+                        <p class="text-gray-600 mb-6 text-base">Specialized tours for enthusiasts with dedicated guides and optimal timing for wildlife shots.</p>
+                        <div class="mt-auto pt-6 border-t border-gray-100 flex items-center justify-between">
+                             <span class="text-brand-green font-bold text-xl">₹3,500 <span class="text-sm font-normal text-gray-500">/ person</span></span>
+                            <a href="booking.html" class="text-brand-orange font-bold hover:text-brand-green transition">Book Now <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden hover-card border border-gray-100 flex flex-col group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-56 bg-gray-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1452570053594-1b985d6ea890?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bird Watching" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-2xl font-bold text-brand-green mb-3 font-serif">Bird Watching Tours</h3>
+                        <p class="text-gray-600 mb-6 text-base">Discover over 200 bird species in Panna with our ornithology experts and specialized equipment.</p>
+                        <div class="mt-auto pt-6 border-t border-gray-100 flex items-center justify-between">
+                             <span class="text-brand-green font-bold text-xl">₹1,800 <span class="text-sm font-normal text-gray-500">/ person</span></span>
+                            <a href="booking.html" class="text-brand-orange font-bold hover:text-brand-green transition">Book Now <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden hover-card border border-gray-100 flex flex-col group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-56 bg-gray-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff225?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nature Walk" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-2xl font-bold text-brand-green mb-3 font-serif">Nature Walks</h3>
+                        <p class="text-gray-600 mb-6 text-base">Guided walking tours through the buffer zones to explore flora, fauna, and local tribal culture.</p>
+                        <div class="mt-auto pt-6 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-brand-green font-bold text-xl">₹1,200 <span class="text-sm font-normal text-gray-500">/ person</span></span>
+                            <a href="booking.html" class="text-brand-orange font-bold hover:text-brand-green transition">Book Now <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden hover-card border border-gray-100 flex flex-col group" data-aos="fade-up" data-aos-delay="500">
+                    <div class="h-56 bg-gray-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Group Tours" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-2xl font-bold text-brand-green mb-3 font-serif">Group Tours</h3>
+                        <p class="text-gray-600 mb-6 text-base">Customized safari experiences for families, corporate groups, and educational institutions.</p>
+                        <div class="mt-auto pt-6 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-brand-green font-bold text-xl">By Request</span>
+                            <a href="booking.html" class="text-brand-orange font-bold hover:text-brand-green transition">Enquire Now <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 (Premium) -->
+                <div class="bg-white rounded-2xl shadow-sm overflow-hidden hover-card border border-gray-100 flex flex-col relative group" data-aos="fade-up" data-aos-delay="600">
+                    <div class="absolute top-4 right-4 bg-brand-gold text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-md">Luxury</div>
+                    <div class="h-56 bg-gray-200 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1534234828569-98f343cc6733?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Premium Safari" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-2xl font-bold text-brand-green mb-3 font-serif">Premium Experience</h3>
+                        <p class="text-gray-600 mb-6 text-base">Luxury safari experience with exclusive access, gourmet meals, and premium accommodations.</p>
+                        <div class="mt-auto pt-6 border-t border-gray-100 flex items-center justify-between">
+                            <span class="text-brand-green font-bold text-xl">By Request</span>
+                            <a href="booking.html" class="text-brand-orange font-bold hover:text-brand-green transition">Enquire Now <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-brand-green mb-12 font-serif" data-aos="fade-up">Additional Services</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-8 border border-gray-100 rounded-2xl hover-card bg-white group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-green transition duration-300 shadow-inner">
+                        <i class="fa-solid fa-shield-heart text-2xl text-brand-green group-hover:text-brand-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-brand-green">Safety & Insurance</h3>
+                    <p class="text-gray-600 text-base">Comprehensive safety measures and insurance coverage included for all safari activities.</p>
+                </div>
+
+                <div class="text-center p-8 border border-gray-100 rounded-2xl hover-card bg-white group cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-green transition duration-300 shadow-inner">
+                        <i class="fa-solid fa-car text-2xl text-brand-green group-hover:text-brand-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-brand-green">Transportation</h3>
+                    <p class="text-gray-600 text-base">Hassle-free pick-up and drop-off services from nearby railway stations and airports.</p>
+                </div>
+
+                <div class="text-center p-8 border border-gray-100 rounded-2xl hover-card bg-white group cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand-green transition duration-300 shadow-inner">
+                        <i class="fa-solid fa-calendar-check text-2xl text-brand-green group-hover:text-brand-gold"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-brand-green">Custom Itineraries</h3>
+                    <p class="text-gray-600 text-base">Personalized tour planning based on your specific interests and duration of stay.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Time to Visit -->
+    <section class="py-20 bg-brand-green text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white font-serif" data-aos="fade-up">Best Time to Visit</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-xl info-box-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-brand-gold text-xl font-bold mb-2">October - February</div>
+                    <h3 class="text-2xl font-bold mb-4 font-serif">Winter Season</h3>
+                    <ul class="space-y-3 text-gray-200">
+                        <li><i class="fa-solid fa-temperature-half mr-2 text-brand-gold"></i> 10°C - 25°C</li>
+                        <li><i class="fa-solid fa-eye mr-2 text-brand-gold"></i> Best for Tiger Spotting</li>
+                        <li><i class="fa-solid fa-camera mr-2 text-brand-gold"></i> Excellent for Photography</li>
+                    </ul>
+                </div>
+
+                <div class="p-8 rounded-xl info-box-hover border border-brand-gold/50" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-brand-gold text-xl font-bold mb-2">March - June</div>
+                    <h3 class="text-2xl font-bold mb-4 font-serif">Summer Season</h3>
+                    <ul class="space-y-3 text-gray-200">
+                        <li><i class="fa-solid fa-temperature-half mr-2 text-brand-gold"></i> 25°C - 45°C</li>
+                        <li><i class="fa-solid fa-paw mr-2 text-brand-gold"></i> High sightings at Water Holes</li>
+                        <li><i class="fa-solid fa-sun mr-2 text-brand-gold"></i> Best for Serious Wildlife Fans</li>
+                    </ul>
+                </div>
+
+                <div class="p-8 rounded-xl info-box-hover opacity-70" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-red-300 text-xl font-bold mb-2">July - September</div>
+                    <h3 class="text-2xl font-bold mb-4 font-serif">Monsoon Season</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li><i class="fa-solid fa-cloud-rain mr-2 text-red-300"></i> Heavy Rainfall</li>
+                        <li><i class="fa-solid fa-lock mr-2 text-red-300"></i> Park Closed for Visitors</li>
+                        <li><i class="fa-solid fa-leaf mr-2 text-red-300"></i> Breeding Season</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-24 bg-brand-cream text-center relative overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10" data-aos="zoom-in">
+            <h2 class="text-4xl font-bold text-brand-green mb-6 font-serif">Ready for Your Adventure?</h2>
+            <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">Book your tiger safari today and create memories that will last a lifetime.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="booking.html" class="btn-gradient text-white px-10 py-4 rounded-full font-bold shadow-xl text-lg transform hover:scale-105">Book Your Safari</a>
+                <a href="tel:+917557388388" class="bg-white text-brand-green border-2 border-brand-green px-10 py-4 rounded-full font-bold hover:bg-green-50 transition shadow-xl text-lg transform hover:scale-105">Call Now: +91 79740 74134</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-gray-300 pt-20 pb-10 text-base border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+                <div>
+                    <h3 class="text-3xl font-bold text-white mb-6 font-serif">Safari With Akash</h3>
+                    <p class="leading-relaxed mb-6 text-gray-400">
+                        This is a Registered Tour & Travel Agency under the name of "Reserve India Tours" organizing premium Safari With Akash National Park packages.
+                    </p>
+                    <div class="flex space-x-5 text-brand-gold text-xl">
+                        <a href="#" class="hover:text-white transition transform hover:scale-110"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="hover:text-white transition transform hover:scale-110"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="hover:text-white transition transform hover:scale-110"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-bold text-white mb-6 border-b-2 border-brand-gold inline-block pb-2">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="hover:text-brand-gold transition block hover:translate-x-2">Home</a></li>
+                        <li><a href="services.html" class="hover:text-brand-gold transition block hover:translate-x-2">Services</a></li>
+                        <li><a href="booking.html" class="hover:text-brand-gold transition block hover:translate-x-2">Safari Booking</a></li>
+                        <li><a href="tour-packages.html" class="hover:text-brand-gold transition block hover:translate-x-2">Tour Packages</a></li>
+                        <li><a href="hotels.html" class="hover:text-brand-gold transition block hover:translate-x-2">Hotels</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-bold text-white mb-6 border-b-2 border-brand-gold inline-block pb-2">Information</h4>
+                    <ul class="space-y-3">
+                        <li><a href="booking.html" class="hover:text-brand-gold transition block hover:translate-x-2">Booking Charges</a></li>
+                        <li><a href="hotels.html" class="hover:text-brand-gold transition block hover:translate-x-2">Hotels & Resorts</a></li>
+                        <li><a href="refund-policy.html" class="hover:text-brand-gold transition block hover:translate-x-2">Refund Policy</a></li>
+                        <li><a href="cancellation-policy.html" class="hover:text-brand-gold transition block hover:translate-x-2">Cancellation Policy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xl font-bold text-white mb-6 border-b-2 border-brand-gold inline-block pb-2">Contact Us</h4>
+                    <ul class="space-y-5">
+                        <li class="flex items-start gap-4">
+                            <div class="bg-gray-800 p-3 rounded-full text-brand-gold"><i class="fa-solid fa-location-dot"></i></div>
+                            <span class="self-center">Panna National Park, Madhya Pradesh, India</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="bg-gray-800 p-3 rounded-full text-brand-gold"><i class="fa-solid fa-phone"></i></div>
+                            <span class="self-center">+91 79740 74134</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <div class="bg-gray-800 p-3 rounded-full text-brand-gold"><i class="fa-solid fa-envelope"></i></div>
+                            <span class="self-center">booking@safariwithakash.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 flex flex-col md:flex-row justify-between items-center">
+                <p>Copyright © 2025 By Safari With Akash (Reserve India Tours)</p>
+                <p class="mt-2 md:mt-0">Developed By <a href="https://dhartee.in" class="text-brand-gold hover:underline">DharTee</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: false, mirror: true, offset: 120, easing: 'ease-in-out' });
+    </script>
+</body>
+</html>
