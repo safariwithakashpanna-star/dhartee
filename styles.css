@@ -1,0 +1,65 @@
+        .hero-section {
+            background-image: linear-gradient(to bottom, rgba(27, 67, 50, 0.2), rgba(8, 28, 21, 0.3)), url('photos/hero-image.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        /* Table Styling */
+        .table-custom th {
+            background-color: #1B4332; /* Updated to new brand green */
+            color: #FDFCF8;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .table-custom tr:nth-child(even) {
+            background-color: #F8F9FA;
+        }
+        /* Row Hover Effect */
+        .table-custom tr:hover {
+            background-color: #e6fffa; /* Very subtle mint green hover */
+            transition: background-color 0.3s ease;
+        }
+
+        /* Enhanced Interactive Elements */
+        .hover-card {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid transparent;
+        }
+        .hover-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px -5px rgba(27, 67, 50, 0.15); /* Green tinted shadow */
+            border-color: #D4AF37; /* Gold border on hover */
+        }
+
+        /* Table Container Animation */
+        .hover-table-container {
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .hover-table-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        /* About Info Box Hover */
+        .info-box-hover {
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .info-box-hover:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+            border-color: #D4AF37;
+        }
+
+        /* Button Gradient */
+        .btn-gradient {
+            background: linear-gradient(45deg, #E65100, #F57C00);
+            transition: all 0.3s ease;
+        }
+        .btn-gradient:hover {
+            background: linear-gradient(45deg, #F57C00, #E65100);
+            box-shadow: 0 10px 15px -3px rgba(230, 81, 0, 0.3);
+        }
+    
